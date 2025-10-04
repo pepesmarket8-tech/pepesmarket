@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PepesMarket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.jpg" alt="Logo PepesMarket" width="120">
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Contacto</a>
+      <div class="carrito" onclick="toggleCarrito()">
+        🛒 <span id="contador">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="productos">
+      <div class="producto">
+        <img src="img/producto1.jpg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>$10.00</p>
+        <button onclick="agregarAlCarrito('Producto 1', 10)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/producto2.jpg" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>$15.00</p>
+        <button onclick="agregarAlCarrito('Producto 2', 15)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/producto3.jpg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>$20.00</p>
+        <button onclick="agregarAlCarrito('Producto 3', 20)">Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <aside id="carritoContenido" class="carrito-contenido">
+    <h2>Carrito</h2>
+    <div id="itemsCarrito"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
