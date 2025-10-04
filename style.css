@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffa84c, #a8e063);
+  min-height: 100vh;
+  color: #333;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header img {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.carrito {
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+}
+
+.carrito span {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #ff5722;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.producto {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.producto button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ffa84c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: background 0.3s;
+}
+
+.producto button:hover {
+  background: #ff8c1a;
+}
+
+.carrito-contenido {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 6px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.4s ease;
+  overflow-y: auto;
+}
+
+.carrito-contenido.abierto {
+  right: 0;
+}
+
+.carrito-contenido h2 {
+  margin-top: 0;
+}
+
+.carrito-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
